@@ -1,0 +1,337 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: whitesmoke;
+  padding-top: 80px; /* biar konten tidak ketiban navbar */
+  margin: 0;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.nav {
+  width: 100%;
+  height: 80px;
+  font-size: 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  width: 45px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 25px;
+  font-weight: 700;
+  color: orange;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+  height: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: orange;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+/* Kosong kanan */
+.nav-right {
+  width: 60px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 15px;          /* kurangi padding horizontal */
+  }
+
+  .brand-name {
+    font-size: 20px;          /* logo dan teks muat */
+  }
+
+  nav ul {
+    gap: 10px;                
+    font-size: 16px;          /* ukuran font lebih pas di mobile */
+  }
+
+  nav ul li a {
+    padding: 8px 10px;        /* padding link lebih kecil */
+  }
+}
+
+
+
+
+/* ---------------- HERO ---------------- */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+  box-sizing: border-box;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1; /* biar teks dan gambar bagi rata */
+  max-width: 600px;
+  color: orange;
+  font-size: large;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero-image img {
+  max-width: 600px; /* ✅ sekarang lebih besar */
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+ 
+.hero-buttons {
+  display: inline-block;        
+  background-color: orange;    
+  border-radius: 30px;         
+  padding: 10px 20px;           
+  color: #fff;                 
+  text-decoration: none;       
+  font-weight: 600;             
+  text-align: center;           
+  transition: background 0.3s;  /* efek hover */
+}
+
+.hero-buttons a{
+  color: white;
+}
+
+.hero-buttons:hover {
+  background-color: #e64a19;    /* warna lebih gelap saat hover */
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+/*program*/
+
+    .program-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: orange;
+    }
+    .program-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .program-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .program-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition:  transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .program-card h3 {
+      color: #ff5722;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .program-card ul li {
+       padding-left: 20px;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+/*testimoni*/
+ .testimonials {
+  text-align: center;            
+  padding: 50px 20px;            
+  background-color: white;        
+}
+
+.testimonials h2 {
+  font-size: 2em;                 
+  margin-bottom: 30px;            
+  color: orange;                  
+}
+
+.testimonial-card {
+  max-width: 500px;                
+  margin: 20px auto;               
+  background: orange;              
+  padding: 20px;                 
+  border-radius: 15px;            
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+
+
+.testimonial-img {
+  width: 100px;                     
+  height: 100px;                   
+  border-radius: 50%;              
+  object-fit: cover;                
+  margin-bottom: 15px; 
+}            
+
+.testimonial-text {
+  font-size: 1.1em;               
+  color: white;                     
+  margin-bottom: 10px;            
+  font-style: italic;                
+}
+
+.testimonial-name {
+  font-weight: bold;               
+  color: #ff5722;                
+}
+
+/* ---------------- LOGIN SECTION ---------------- */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* login full layar */
+  background-color: orange;
+  padding: 40px 20px;
+}
+
+.login-container {
+  background: #fff;
+  padding: 35px 28px;
+  border-radius: 15px;
+  width: 340px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: orange;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #555;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.btn {
+  background: #ff5722;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e64a19;
+}
+
+/*footer*/
+
+.footer {
+  background-color: orange;       
+  color: white;                    
+  padding: 40px 0;                  
+  text-align: center;               
+  font-family: Arial, sans-serif;
+}
+
+.footer-container p {
+  margin: 0;                        
+  font-size: 0.95rem;              
+}
